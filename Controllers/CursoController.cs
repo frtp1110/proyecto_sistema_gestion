@@ -31,7 +31,7 @@ namespace ProyectoWeb.Controllers
             List<Curso> oListaCurso = CD_Curso.Listar();
             List<NivelDetalleCurso> oListaNivelDetalleCurso = CD_NivelDetalleCurso.Listar();
 
-            //FILTRAMOS SEGUN NUESTRO PARAMETROS DE FILTRO
+            //Filtramos en base a nuestros parametros
             if (oListaNivelDetalleCurso != null)
             {
                 oListaNivelDetalleCurso = oListaNivelDetalleCurso.Where(x =>
@@ -40,7 +40,7 @@ namespace ProyectoWeb.Controllers
 
             }
 
-            //OBTENEMOS LOS POR ASIGNAR Y LOS ASIGNADOS
+            //Obtenemos los cursos asignados y por asignar
             if (oListaCurso != null && oListaNivelDetalleCurso != null)
             {
                 oListaCursosAsignados = (from a in oListaCurso

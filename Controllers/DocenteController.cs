@@ -42,7 +42,7 @@ namespace ProyectoWeb.Controllers
         public JsonResult ListarAsignados(int idnivel = 0, int idgradoseccion = 0)
         {
 
-            //MOSTRAMOS TODOS LOS HORARIOS POR NIVEL Y GRADOSECCION
+            //Mostramos todos los horarios por nivel, grado y seccion
             List<DocenteCurso> oListaDocenteCurso = CD_DocenteCurso.Listar();
             oListaDocenteCurso = oListaDocenteCurso.Where(x => x.oNivelDetalleCurso.oNivel.IdNivel == idnivel && x.oNivelDetalleCurso.oGradoSeccion.IdGradoSeccion == idgradoseccion).ToList();
 
